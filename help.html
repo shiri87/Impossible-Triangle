@@ -1,0 +1,179 @@
+<!-- Version : 1.0
+Last edited by: Eunsil Lim
+Last edit date: 13 - Nov - 2019 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Impossible Triangle</title>
+<!-- CSS -->
+<!--thisdirectoy -->
+<!-- root directory-->
+
+     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+     <link rel="stylesheet" href="./css/mystyle.css">
+     <script src="https://kit.fontawesome.com/7417a578b4.js"></script>
+     <!-- add api -->
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+     integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+     crossorigin=""/>
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+     crossorigin=""></script>
+
+
+</head>
+<body>
+  <!-- Content here -->
+  <div class="Content">
+    <!-- header -->
+    <header> 
+        <!-- top -->         
+        <div class="top-nav fixed-top"> 
+            <div class="top-bar float-right ml-5 mr-5 mt-1 mb-1 ">
+                <a href="upload.html" class="upload p-1">
+                  <i class="fas fa-file-upload"> Upload</i></a>
+  
+                <a href="login.html" class="upload p-1">
+                  <i class="fas fa-sign-in-alt"> Login</i></a>
+                  
+                <a href="help.html" class="upload p-1">
+                    <i class="fas fa-question-circle"> Help</i></a>
+  
+            </div>
+            
+         <!-- nav -->
+            <nav id="navid" class="navbar navbar-expand-lg navbar-light bg-light clearfix ml-5 mr-5 p-2" style="clear: both;">
+                <a class="navbar-brand" href="index.html">
+                  <img class="logo" src="img/logo.png" alt="impossible triangle logo">
+                  <img class="logo_w" src="img/logo-w.png" alt="impossible triangle logo">
+                      </a>
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav ml-auto">
+                    <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="index.html#aboutUs">About Us</a>
+                    <a class="nav-item nav-link" href="index.html#gallery">Gallery</a>
+                    <a class="nav-item nav-link" href="index.html#materials">materials</a>
+                    <a class="nav-item nav-link" href="index.html#contact">contact</a>
+                  </div>
+                  
+                </div>
+            </nav>
+            
+          </div> 
+      </header>
+    <!--header end-->
+
+<!-- help doc -->
+        <div id="help" class="p-5">
+  
+            <div class="titlebgupload pt-5">
+                <div class="titlebgupload process_comment text-uppercase pt-5">      
+                  <h1>How to Upload a 3D model?</h1>
+                  <h4>If you can't be sure how to upload, you can check it out! You can upload your file here <a href="upload.html">click here</a></h4>
+                </div> 
+          </div>
+        </div>
+        <!-- body of doc -->
+        <div class="p-5">
+        <img src="./img/help-doc.png" alt="how to upload">
+        </div>
+
+<!-- help doc end -->
+
+  
+    <!-- contact start -->
+    <div id="contact" class="p-5">
+        <div class="address text_center p-5 col-md-4">
+              <h1>Contact Us</h1>
+              <h4>impossible triangle</h4>
+              <P>08/07 Queen st,<br>
+              Southbank,<br>
+              VIC, 1305</P>
+              <p>&plus;61 0431 878 007</p>
+              <div id="mapid">
+              </div>
+          </div>
+    <!-- form -->
+          <div class="col-md-8">
+          <form>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                    <input type="checkbox" class="custom-control-input" id="customControlInline">
+                    <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+                  </div>
+          
+              </div>
+              <div class="form-group">
+                <label for="username">Your Name</label>
+                <input type="text" class="form-control" id="username" placeholder="Name / Nickname also okay">
+              </div>
+
+              <div class="form-group">
+                <label for="typeOfQ">What can we help you with?</label>
+                <select multiple class="form-control" id="typeOfQ">
+                  <option>Price</option>
+                  <option>Design</option>
+                  <option>materials</option>
+                  <option>Shipping</option>
+                  <option>Complain</option>
+                  <option>etc</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cantact_content">Content</label>
+                <textarea class="form-control" id="cantact_content" rows="3"></textarea>
+              </div>
+              <button type="submit" class="btn btn-secondary mb-2">Help!</button>
+            </form>
+            </div>  
+
+    </div>
+<!-- contact end -->
+</div>
+<!-- Content end-->
+        <footer class="border-top border-light row">
+            <div class="col-6 col-md-4">Impossible Triangle &copy; 2019</div>
+
+            <div class="col-6 col-md-4 social_icons">
+                <a href="youtube.com"><i class="fab fa-youtube fa-2x m-1"></i></a>
+                <a href="instagram.com"><i class="fab fa-instagram fa-2x m-1"></i></a>
+                <a href="facebook.com"><i class="fab fa-facebook fa-2x m-1"></i></a>
+            </div>
+
+            <div class="col-6 col-md-4 footer-menu"><a href="https://www.oaic.gov.au/privacy/the-privacy-act/">Privacy</a> &middot; <a href="index.html#contact">Terms</a></div>
+        </footer>
+
+
+
+<!-- to the top -->
+<a href="#" class="btn btn-link btn-lg back-to-top" id="back-to-top"><i class="fas fa-arrow-alt-circle-up"></i></a>
+
+<!-- scripts-->
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+<!-- Jquery CDN -->
+<script
+ src="https://code.jquery.com/jquery-3.4.1.min.js"
+ integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+ crossorigin="anonymous"></script>
+ <script src="js/myjs.js"> </script>
+
+
+</body>
+</html>

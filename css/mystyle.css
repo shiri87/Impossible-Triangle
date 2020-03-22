@@ -1,0 +1,276 @@
+/* Version : 1.0
+Last edited by: Eunsil Lim
+Last edit date: 13 Nov 2019 */
+
+
+:root{
+--primary-color :#096;
+--sub-color:#3c9;
+--sub-rgba: rgba(0,153,102,0.5);
+--gray-rgba :rgba(250,250,250,0.7);
+--dark-color : #033;
+--light-color : #fff;
+}
+*{font-family: 'Roboto', Arial, sans-serif;}
+
+/* top bar */
+.upload{
+  color: var(--primary-color);
+  background:var(--gray-rgba);
+}
+.upload:hover{
+  text-decoration: none;
+  color:var(--light-color) ;
+  background-color: var(--dark-color);
+}
+/* navigation */
+.nav-item:hover{
+background-color: var(--sub-color);
+color:var(--light-color) ;
+}
+.logo, .logo_w {visibility: hidden; } 
+
+    
+/* top button */
+#back-to-top{
+  position:fixed;
+  bottom: 5%;
+  right: 5%;
+  color:var(--sub-rgba);
+  font-size: 2.5rem;
+  }
+
+ /* nav */
+ .logo, .logo_w{visibility:visible;
+ width : auto;}
+
+ /* carousel */
+ .carousel-caption{
+padding-bottom: 3rem;
+ }
+ .carousel-item img{
+  max-width: 100%;
+ }
+
+ /* about us */
+#aboutUs{
+text-align: center;
+}
+#aboutUs i { 
+  border: 3rem solid var(--primary-color);
+  background-color:var(--primary-color);
+  color: var(--light-color);
+  line-height: 1em;
+  display: inline-block;}
+
+/* process */
+#process{
+background: var(--gray-rgba);
+}
+
+#process .sequence { 
+    border: 1rem solidvar var(--primary-color);
+    padding:1rem;
+    margin: 1rem;
+    display: inline;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    line-height: 1em;
+}
+#process .sequence:hover{
+  background-color: var(--primary-color);
+}
+
+#process .lead{
+  width: 100%;
+}
+
+/* gallery   */
+
+/* materials */
+#materials{
+  background: var(--gray-rgba);
+}
+.materials_card .card{
+ width :95%;
+}
+
+/* contact */
+#contact { 
+background: var(--dark-color);
+color: var(--light-color);
+display: flex;
+}
+#emailHelp{
+  color: var(--sub-color );
+}
+/* footer */
+
+footer{ 
+  background: var(--dark-color);
+  color: var(--light-color);
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 0.5rem; 
+
+  }
+footer a{
+  color:var(--light-color); 
+  }
+footer a:hover{
+   color: var(--sub-color );
+}
+
+/*media query*/
+@media (max-width: 600px) { 
+
+  .carousel-caption h1{
+   font-size: 2rem !important;
+   text-shadow: var(--gray-rgba);
+  }
+
+ #aboutUs h1, #process h1{
+  font-size: 2rem;
+ }
+.carousel-caption .btn-it{
+  padding: 0.5rem;
+}
+ #aboutUs h3, #process h3{
+  font-size:1.5rem;
+ }
+ .icons i{
+  font-size: 2rem;
+ }
+
+ footer{
+   display: flex;
+   flex-direction: column;
+   align-items:  center;
+ }
+ footer i{
+   font-size: 1rem;
+ }
+}
+
+/*media query*/
+@media (max-width: 992px) { 
+
+  .logo{
+  width : 60%;
+}
+ .logo_w{display: none; }
+
+ .carousel-inner h1{
+   font-size: 3rem;
+ }
+ .carousel-inner h2{
+   font-size:1rem;
+ }
+/* about */
+ .about_comment h1{
+   font-size: 2rem;
+ }
+
+ #aboutUs i { 
+  border: 2rem solid var(--primary-color);
+  line-height: 1em;
+  display: inline-block;
+}
+.icons{
+  margin-bottom: 1rem;
+}
+
+/* process */
+
+.process_comment h1{
+font-size : 2rem;
+}
+.process_comment h4{
+font-size: 1rem;
+}
+.sequence .lead{
+  line-height: 1.5rem;
+}
+/* gallrey */
+.gallery_img img{
+  padding: 0.5rem 0;
+  margin: 0;
+}
+/* materials */
+.card{
+  padding: 0.5rem 0;
+}
+/* contect */
+
+#contact{
+display: block;
+padding: 0 !important;
+}
+.address{
+  padding: 0;
+}
+/* footer */
+footer{
+  display: inline-block;
+}
+}
+
+/* upload page */
+/* heading */
+#upload{
+  background-color: #f8cedb;
+  background-image: url(../img/upload-bg.png);
+  background-repeat: no-repeat;
+  background-position: left;
+
+}
+.titlebgupload{
+  justify-content: flex-end;
+}
+.titlebgupload a{
+  color: var(--primary-color);
+}
+.titlebgupload a:hover{
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+
+/* login */
+#logintitle{
+  background-color: #ededed;
+  background-image: url(../img/login-bg.png);
+  background-repeat: no-repeat;
+  background-position: left;
+
+}
+#login{
+  justify-content: center;
+  align-content: center;
+  margin: auto 0;
+}
+.btn-it{
+  padding: 1rem 3rem;
+  margin: 0.5rem;
+  color:var(--light-color);
+  background-color: var(--dark-color);
+  display: inline-block;
+
+}
+.btn-it:hover{
+  background-color: var(--primary-color);
+  color:var(--light-color);
+}
+/* help doc */
+#help{
+  background-color: #9292c3;
+  background-image: url(../img/help-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#help img{
+  width: 100%;
+}
+
+/* map */
+#mapid { height: 180px; }
